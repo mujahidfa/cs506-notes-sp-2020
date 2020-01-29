@@ -61,7 +61,7 @@ What is SE for?
 
 - Waterfall, agile etc
 
-## SE Process
+## Software Development Lifecycle/Process
 
 SE boils down to several steps:
 
@@ -109,7 +109,12 @@ Next, was the **Evolutionary Model** i.e. **Rapid Application Development (RAD)*
 
 Iteratively approach building the software little-by-little, pushing features to the next iteration.
 
+We understand some requirements, we design/develop it, we let the client see it, then we iteratively add new features according to the client.
+
 Has the best of both worlds: allow requirement change, documentation heavy, while having prototypes for the client.
+
+- comes about because we are starting to develop UI sites
+- so, it needs small increments of improvements so that customers can see the product piece-by-piece before it is finished
 
 **Pros**:
 
@@ -118,3 +123,111 @@ Has the best of both worlds: allow requirement change, documentation heavy, whil
   - allows clients to have better introspection on whether a requirement is truly needed given the cost and time
 - highest priority functionalities tend to receive the most testing
 - early iterations act as prototype to help elicit requirements for later iterations
+
+**Cons**:
+
+- The client doesn't necessarily know what they want so it's hard to find a direction.
+- Requires clients to be present (not suitable for remote).
+- A lot more work than it has to be.
+
+### **Agile (Extreme programming or Scrum)**
+
+Approach development through very small increments of functionality.
+
+Relies on constant code improvement, user/client involvement in the dev team and pairwise programming.
+
+Agile, in practice, uses a version of Waterfall/Extreme in between because it works better and faster. A lot of companies have their own flavor.
+
+## **Spiral method**
+
+Process is represented as a **spiral** rather than as a sequence of activities with backtracking.
+
+Each loop in the spiral represents a phase in the process.
+
+No fixed phases such as specification or design.
+
+Loops in the spiral are chosen depending on what is required.
+
+Risks are explicitly assessed and resolved throughout the process.
+
+Steps:
+
+1. Set specific objectives
+2. Assess risks and put activities in place to mitigate those risks
+3. Choose a development model for the system (can be any of the generic models, very depends on the system)
+4. Review the projects and plan the next phase of the spiral
+
+Microsoft uses Spiral because they have so many systems to support so they have to be backwards compatible (i.e. Windows updates).
+
+**Pros**:
+
+- Good for mission critical or highly sensitive systems i.e. military/medical apps
+- The only software process model that has explicit risk management
+- Extensive documentation
+- Multiple versions of the system can be developed
+
+**Cons**:
+
+- There's no "clear" end to the project
+- Can get very expensive
+- Process is risk averse/reluctant (pro/con?)
+
+## **Extreme programming/Scrum (XP)**
+
+XP is like Iterative but taken to the extreme.
+
+- A lot more iterations because every iteration has only little scope to cover and small functionality.
+- Shorter development cycles/sprints (2-4 week development cycles)
+- No break between iterations to meet clients.
+
+### Cycle
+
+1. Meet with clients to elicit requirements.
+
+   - User stories/backlog items + acceptance test: acceptance test is to ensure it is something the user can do.
+   - User stories is what the user wants in detail.
+
+2. Planning
+
+   - Break stories into tasks and estimate costs i.e. how much effort needed to complete the task. The effort is based on previous baselines (i.e. effort points).
+   - Best if client gives their story priorities because if software is shipped not complete, at least the client can be satisfied.
+
+3. Implementations
+
+   - Write unit tests first
+   - Write simplest code to pass the tests
+   - Refactor code
+   - Pair programming
+
+4. Finish one part and iterate the process
+
+### XP Customer
+
+Have them as direct communication with the client.
+
+### User stories
+
+Have small Kanban boards that have user stories, and start asking what-if questions for specific details. We don't include implementation detail here (i.e. use Axios to call apis)
+
+### Acceptance tests
+
+Almost like unit tests, we build tests that test the interaction between functionalities.
+
+### Planning game
+
+**Pros**:
+
+- Code developed earlier has better quality because it gets tested multiple times on every iteration after it.
+
+## **Conclusion**
+
+1. If requirements are poorly understood or expected to change, best use a process with flexibility like Evolutionary, Iterative, Agile.
+
+2. If a big software system has so many moving parts that depend on each other, best use a sequential process like Spiral.
+
+3.
+
+### Mixed processes
+
+- With Spiral, new components may be developed using any of the 3 other methods
+- When UIs have to be tested by users, we will have to use a version of Iterative.
